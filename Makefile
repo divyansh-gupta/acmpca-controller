@@ -7,6 +7,7 @@ GO111MODULE=on
 VERSION ?= "v0.0.0"
 GITCOMMIT=$(shell git rev-parse HEAD)
 BUILDDATE=$(shell date -u +'%Y-%m-%dT%H:%M:%SZ')
+
 GO_LDFLAGS=-ldflags "-X main.version=$(VERSION) \
 			-X main.buildHash=$(GITCOMMIT) \
 			-X main.buildDate=$(BUILDDATE)"
